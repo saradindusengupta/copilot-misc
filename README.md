@@ -1,18 +1,19 @@
 # Copilot Miscellaneous
 
-> A comprehensive collection of GitHub Copilot customizations including chat modes, instructions, and prompts for enhanced AI-assisted development workflows.
+> A comprehensive collection of GitHub Copilot customizations including chat modes, skills, instructions, and prompts for enhanced AI-assisted development workflows.
 
 ⭐ If you like this project, star it on GitHub — it helps a lot!
 
-[Features](#features) • [Getting Started](#getting-started) • [Chat Modes](#chat-modes) • [Instructions](#instructions) • [Prompts](#prompts) • [Usage](#usage)
+[Features](#features) • [Getting Started](#getting-started) • [Chat Modes](#chat-modes) • [Skills](#skills) • [Instructions](#instructions) • [Prompts](#prompts) • [Usage](#usage)
 
 ## Overview
 
-This repository contains a curated collection of customizations for GitHub Copilot, designed to enhance your development experience through specialized chat modes, detailed instructions, and powerful prompts. Whether you're debugging code, planning architecture, or generating documentation, these tools help you work more efficiently with AI assistance.
+This repository contains a curated collection of customizations for GitHub Copilot, designed to enhance your development experience through specialized chat modes, reusable skills, detailed instructions, and powerful prompts. Whether you're debugging code, planning architecture, modeling knowledge graphs, or generating documentation, these tools help you work more efficiently with AI assistance.
 
 ## Features
 
-- **🤖 Specialized Chat Modes**: 12 distinct chat modes tailored for different development scenarios
+- **🤖 Specialized Chat Modes**: 16 distinct chat modes tailored for different development scenarios
+- **🧠 Reusable Skills**: Domain-specific skills for UML, Neo4j schema design, Python docstrings, and structured log analysis
 - **📋 Development Instructions**: Comprehensive guidelines for various technologies and practices
 - **🎯 Purpose-Built Prompts**: Ready-to-use prompts for common development tasks
 - **🔧 Extensible Framework**: Easy to customize and extend for your specific needs
@@ -28,14 +29,14 @@ This repository contains a curated collection of customizations for GitHub Copil
 
 2. **Configure VS Code**: Place the files in your VS Code user data directory to enable the customizations globally, or keep them in your workspace for local use.
 
-3. **Start using**: The chat modes, instructions, and prompts will be available in your GitHub Copilot interface.
+3. **Start using**: The chat modes, skills, instructions, and prompts will be available in your GitHub Copilot interface.
 
 > [!TIP]
 > For best results, familiarize yourself with the available chat modes and their specific purposes before starting your development tasks.
 
 ## Chat Modes
 
-The `chatmodes/` directory contains specialized AI personas for different development scenarios:
+The `agents/` directory contains specialized AI personas for different development scenarios:
 
 | Chat Mode | Description | Best For |
 |-----------|-------------|----------|
@@ -48,10 +49,26 @@ The `chatmodes/` directory contains specialized AI personas for different develo
 | **plan** | Strategic planning and architecture assistant | Architecture, system design |
 | **principal-software-engineer** | Senior-level technical guidance | Complex problem solving |
 | **prompt-builder** | Expert prompt engineering and validation | AI prompt optimization |
-| **software-engineer-agent** | Comprehensive development assistance | General development tasks |
+| **pytest-test-case-writer** | Generate robust pytest test cases | Unit testing, test design |
+| **software-engineer-agent-v1** | Comprehensive development assistance | General development tasks |
 | **specification** | Generate technical specifications | Requirements, documentation |
 | **task-researcher** | Comprehensive project analysis | Research, investigation |
+| **tdd-red** | Guide test-first failing test creation | TDD red phase |
+| **tdd-green** | Guide minimal implementation to pass tests | TDD green phase |
 | **tech-debt-remediation-plan** | Technical debt remediation planning | Code improvement, refactoring |
+
+## Skills
+
+The `skills/` directory contains reusable, domain-specific capability packs:
+
+- **`drawio-uml-skill`**: Parse, validate, and generate UML diagrams in draw.io format
+- **`neo4j-schema`**: Design Neo4j knowledge graph schemas with labels, relationships, and Cypher constraints/indexes
+- **`python-docstring-skill`**: Generate professional Python docstrings for functions, classes, and modules
+- **`structured-log-analyst`**: Analyze structured logs with anomaly, latency, and failure pattern detection
+
+Recent additions include Neo4j domain references in:
+- **`skills/neo4j-schema/references/documents.md`**
+- **`skills/neo4j-schema/references/enterprise.md`**
 
 ## Instructions
 
